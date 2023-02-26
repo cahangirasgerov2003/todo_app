@@ -16,9 +16,6 @@ sendButton.addEventListener("click", addTodo);
 // };
 function addTodo(e) {
   e.preventDefault();
-  fullNameData = [...fullNameData, firstName.value];
-  lastNameData = [...lastNameData, lastName.value];
-  ageData = [...ageData, age.value];
   if (
     firstName.value.trim().length === 0 ||
     lastName.value.trim().length === 0 ||
@@ -27,6 +24,9 @@ function addTodo(e) {
     alert("You didn't do the filling correctly!");
     return;
   }
+  fullNameData = [...fullNameData, firstName.value];
+  lastNameData = [...lastNameData, lastName.value];
+  ageData = [...ageData, age.value];
   firstName.value = "";
   lastName.value = "";
   age.value = "";
